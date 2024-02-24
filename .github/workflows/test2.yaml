@@ -19,7 +19,7 @@ jobs:
         run: npm test
   deploy:
     runs-on: ubuntu-latest
-    # needs: [lint, test]
+    needs: [lint, test]
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
